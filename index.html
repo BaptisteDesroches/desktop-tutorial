@@ -1,0 +1,68 @@
+<?php
+    @$keywords=$_GET["keywords"];
+    @$valider=$_GET["valider"];
+    if(isset($valider) && !empty(trim($keywords))){
+        include("connexion.php")
+    }
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="Baptiste Desroches" />
+        <link href="style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js"></script>
+        <title>Page d'accueil</title>
+    </head>
+
+    <body>
+<!-- menu part -->
+            <nav class="box">
+                <img class="logo" src="assets\logo.JPG">
+                <ul>
+                    <li><a href="Actualités">Actualités</a></li>
+                    <li><a href="Jeux">Jeux</a></li>
+                </ul>
+                <input class="search" type="text" id="searchInput" placeholder="Search..." oninput="performSearch()">
+                <div id="searchResults"></div>
+            </nav>
+
+<!-- news part -->
+        <div class="news-slider">
+            <div class="news-item">
+              <img class='img' src="assets\futuristic-gamer-hd-wallpaper-4k-background-ynevquos.jpeg">
+              <div class="news-content">
+                <h3>News Title 1</h3>
+                <p>Description for News 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Read More</a>
+              </div>
+              <div>
+                <img class='img' src="assets\Creating_music.jpg">
+                <div class="news-content">
+                  <h3>News Title 2</h3>
+                  <p>Description for News 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <a href="#">Read More</a>
+                </div>
+            </div>
+<!-- search bar v2 part -->
+    <form name="fo" method="get" action="">
+        <input type="text" name="keywords" placeholder="Mots-clés"/>
+        <input type="submit" name="valider" value="rechercher"/>
+    </form>
+    <div id="resultats">
+        <div id="nbr">2 résultats</div>
+        <ol>
+            <li> Résultats 1</li>
+        </ol>
+    </div>
+    </body>
+
+
+
+
+    <footer>
+        <div>Copyright</div>
+    </footer>
+</html>
